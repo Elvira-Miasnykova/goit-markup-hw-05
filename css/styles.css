@@ -170,7 +170,6 @@ p {
 .auth-nav .link:hover,
 .auth-nav .link:focus {
   color: var(--accent-color);
-  transition: color 250ms var(--function-animation);
 }
 
 .main-nav .current {
@@ -271,8 +270,6 @@ p {
 .btn:hover,
 .btn:focus {
   background-color: var(--btn-hover-color);
-  transition: background-color 250ms var(--function-animation),
-    box-shadow 250ms var(--function-animation);
 }
 
 /* portfolio buttons  */
@@ -299,13 +296,10 @@ p {
 }
 .filter-btn:hover,
 .filter-btn:focus {
-  color: var(--white-txcolor);
   background-color: var(--accent-color);
+  color: var(--white-txcolor);
   box-shadow: 0px 3px 1px rgba(0, 0, 0, 0.1), 0px 1px 2px rgba(0, 0, 0, 0.08),
     0px 2px 2px rgba(0, 0, 0, 0.12);
-  transition: background-color 250ms var(--function-animation),
-    color 250ms var(--function-animation),
-    box-shadow 250ms var(--function-animation);
 }
 .filter-nav .current-btn {
   color: var(--white-txcolor);
@@ -475,28 +469,12 @@ p {
 .alink:hover {
   color: var(--white-txcolor);
   background-color: var(--accent-color);
-  transition: background-color 250ms var(--function-animation),
-    color 250ms var(--function-animation);
 }
 .alink-icon {
   width: 20px;
   height: 20px;
   fill: currentColor;
 }
-.alink-icon:focus,
-.alink-icon:hover {
-  /* fill: var(--white-txcolor); */
-}
-/* @keyframes alink-animation {
-  0% {
-    border-radius: 50%;
-    background-color: var(--white-txcolor);
-  }
-  100% {
-    border-radius: 50%;
-    background-color: red;
-  }
-} */
 .team-name {
   margin-bottom: 10px;
   font-weight: 500;
@@ -560,11 +538,8 @@ p {
   position: relative;
   border: 1px solid #eeeeee;
   border-radius: 0px 0px 4px 4px;
-  overflow: hidden;
 }
-.filter-img-container:hover::before {
-  opacity: 1;
-}
+
 .filter-img-container {
   position: relative;
   overflow: hidden;
@@ -579,6 +554,9 @@ p {
   opacity: 0;
   transform: translateY(100%);
   transition: transform 250ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+.filter-img-container:hover::before {
+  opacity: 1;
 }
 .filter-content {
   /* position: relative; */
@@ -625,7 +603,6 @@ p {
 .filter-link:hover {
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-  transition: box-shadow 250ms var(--function-animation);
 }
 
 .filter-link:focus .filter-actions,
@@ -747,24 +724,12 @@ p {
 .footer-link:focus,
 .footer-link:hover {
   background-color: var(--accent-color);
-  transition: background-color 250ms var(--function-animation);
 }
 .icon-footer {
   width: 20px;
   height: 20px;
   fill: currentColor;
 }
-/* @keyframes footer-icon-animation {
-  0% {
-    border-radius: 50%;
-    background-color: rgba(255, 255, 255, 0.1);
-  }
-  100% {
-    border-radius: 50%;
-    background-color: var(--accent-color);
-  }
-} */
-
 .footer .link {
   line-height: 1.71;
   letter-spacing: 0.03em;
@@ -776,7 +741,6 @@ p {
 .footer .link:hover,
 .footer .link:focus {
   color: var(--accent-color);
-  transition: color 250ms var(--function-animation);
 }
 
 /* modal window */
@@ -811,11 +775,6 @@ p {
   transform: translate(-50%, -50%) scale(0.8);
   transition: transform 250ms var(--function-animation);
 }
-
-/* .button-box {
-  display: block;
-  position: relative;
-} */
 .backdrop-btn {
   position: absolute;
   display: block;
